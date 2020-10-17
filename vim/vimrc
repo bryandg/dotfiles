@@ -1,5 +1,6 @@
 syntax on
 set tabstop=4
+set shiftwidth=4
 "some random words"
 set relativenumber
 set number
@@ -17,6 +18,16 @@ let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
+
+" File type specific settings
+
+" yaml
+autocmd FileType yaml setlocal expandtab
+
+" python
+let g:ale_linters = {'python': ['flake8']}
+
+
 " Put these lines at the very end of your vimrc file.
 " Load all plugins now.
 " Plugins need to be added to runtimepath before helptags can be generated.
@@ -24,5 +35,3 @@ packloadall
 " Load all of the helptags now, after plugins have been loaded.
 " All messages and errors will be ignored.
 silent! helptags ALL
-
-let g:ale_linters = {'python': ['flake8']}
