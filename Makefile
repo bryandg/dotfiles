@@ -2,7 +2,7 @@ all: vim terminal
 .PHONY: all vim terminal
 
 vim:
-	cd ..; ln -s dotfiles/vim/.vim .vim
+	cd ..; ln -sf dotfiles/vim .vim
 
 terminal:
 	cd ..; ln -sf dotfiles/udacity-terminal-config/.udacity-terminal-config .udacity-terminal-config;
