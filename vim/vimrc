@@ -33,6 +33,15 @@ set smartcase
 " yaml
 autocmd FileType yaml setlocal expandtab
 " python
+autocmd FileType python
+	\ setlocal tabstop=4 |
+	\ setlocal softtabstop=4 |
+	\ setlocal shiftwidth=4 |
+	\ setlocal textwidth=79 |
+	\ setlocal expandtab |
+	\ setlocal autoindent |
+	\ setlocal fileformat=unix
+
 let g:ale_linters = {'python': ['flake8', 'mypy']}
 " FIXERS HAD TO GO AFTER LOADING ALE...
 
