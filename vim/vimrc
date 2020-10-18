@@ -33,7 +33,8 @@ set smartcase
 " yaml
 autocmd FileType yaml setlocal expandtab
 " python
-let g:ale_linters = {'python': ['flake8']}
+let g:ale_linters = {'python': ['flake8', 'mypy']}
+" FIXERS HAD TO GO AFTER LOADING ALE...
 
 " Put these lines at the very end of your vimrc file.
 " Load all plugins now.
@@ -42,3 +43,10 @@ packloadall
 " Load all of the helptags now, after plugins have been loaded.
 " All messages and errors will be ignored.
 silent! helptags ALL
+
+" python
+let g:ale_fixers = {
+\	'*': ['remove_trailing_lines', 'trim_whitespace'],
+\	'python': ['black', 'isort']
+\}
+let g:ale_fix_on_save = 1
