@@ -1,12 +1,15 @@
 syntax on
 set tabstop=4
 set shiftwidth=4
-"some random words"
 set relativenumber
 set number
 set autoindent
 set scrolloff=5
 set incsearch
+
+" search behavior, ignore case when search all lowercase
+set ignorecase
+set smartcase
 
 :colorscheme darkblue
 :highlight Visual cterm=reverse ctermbg=NONE
