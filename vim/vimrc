@@ -1,36 +1,35 @@
-syntax on
-set tabstop=4
-set shiftwidth=4
-set relativenumber
-set number
-set autoindent
-set scrolloff=5
-set incsearch
-
-" search behavior, ignore case when search all lowercase
-set ignorecase
-set smartcase
-
+" appearance
 :colorscheme darkblue
 :highlight Visual cterm=reverse ctermbg=NONE
-
-:nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
-
+syntax on
+set relativenumber
+set number
+set scrolloff=5
+set incsearch
 " change cursor shape based on mode
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
 let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-
 " working with multiple files
 set splitright
 set splitbelow
+
+" typing behavior
+set tabstop=4
+set shiftwidth=4
+set autoindent
+
+" search behavior, ignore case when search all lowercase
+set ignorecase
+set smartcase
+"\s to search word under cursor
+:nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 " File type specific settings
 " yaml
 autocmd FileType yaml setlocal expandtab
 " python
 let g:ale_linters = {'python': ['flake8']}
-
 
 " Put these lines at the very end of your vimrc file.
 " Load all plugins now.
