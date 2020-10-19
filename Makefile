@@ -14,7 +14,7 @@ terminal:
 	fi \
 
 linux:
-	./linux-cli/fzf/install
+	which fzf && echo "fzf already installed" || ./linux-cli/fzf/install
 	
 submodules:
 	git submodule init && git submodule update
