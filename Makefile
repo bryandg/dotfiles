@@ -13,7 +13,7 @@ terminal:
 		cat udacity-terminal-config/bash_profile >> ../.bash_profile; \
 	fi \
 
-linux:
+linux: submodules
 	which fzf && echo "fzf already installed" || ./linux-cli/fzf/install
 	
 submodules:
