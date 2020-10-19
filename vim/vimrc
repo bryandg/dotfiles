@@ -33,8 +33,6 @@ set smartcase
 :nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
 
 " File type specific settings
-" yaml
-autocmd FileType yaml setlocal expandtab
 " python
 autocmd FileType python
 	\ setlocal tabstop=4 |
@@ -44,9 +42,10 @@ autocmd FileType python
 	\ setlocal expandtab |
 	\ setlocal autoindent |
 	\ setlocal fileformat=unix
-
 let g:ale_linters = {'python': ['flake8', 'mypy']}
 " FIXERS HAD TO GO AFTER LOADING ALE...
+" yaml
+autocmd FileType yaml setlocal expandtab
 
 " Put these lines at the very end of your vimrc file.
 " Load all plugins now.
