@@ -1,5 +1,5 @@
-all: vim terminal linux
-.PHONY: all vim terminal linux
+all: vim terminal linux submodules
+.PHONY: all vim terminal linux submodules
 
 vim:
 	cd ..; ln -nsf dotfiles/vim .vim
@@ -14,4 +14,7 @@ terminal:
 	fi \
 
 linux:
-	linux-cli/fzf/install
+	./linux-cli/fzf/install
+	
+submodules:
+	git submodule init && git submodule update
