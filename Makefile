@@ -1,5 +1,5 @@
-all: vim terminal
-.PHONY: all vim terminal
+all: vim terminal linux
+.PHONY: all vim terminal linux
 
 vim:
 	cd ..; ln -nsf dotfiles/vim .vim
@@ -12,3 +12,6 @@ terminal:
 	else \
 		cat udacity-terminal-config/bash_profile >> ../.bash_profile; \
 	fi \
+
+linux:
+	linux-cli/fzf/install

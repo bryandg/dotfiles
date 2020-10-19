@@ -47,6 +47,9 @@ let g:ale_linters = {'python': ['flake8', 'mypy']}
 " yaml
 autocmd FileType yaml setlocal expandtab
 
+" packages
+set rtp+=~/dotfiles/linux-cli/fzf
+
 " Put these lines at the very end of your vimrc file.
 " Load all plugins now.
 " Plugins need to be added to runtimepath before helptags can be generated.
