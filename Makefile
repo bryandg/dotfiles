@@ -12,7 +12,6 @@ terminal:
 	else \
 		cat udacity-terminal-config/bash_profile >> ../.bash_profile; \
 	fi \
-	set -o vi # enable vi keybindings w/ command line
 
 linux: submodules
 	which fzf && echo "fzf already installed" || ./linux-cli/fzf/install && echo "source ~/.fzf.bash" >> ~/.bash_profile
