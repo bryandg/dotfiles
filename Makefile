@@ -14,7 +14,7 @@ terminal:
 	fi \
 
 linux: submodules
-	which fzf && echo "fzf already installed" || ./linux-cli/fzf/install
+	which fzf && echo "fzf already installed" || ./linux-cli/fzf/install && echo "source ~/.fzf.bash" >> ~/.bash_profile
 	
 submodules:
 	git submodule init && git submodule update
