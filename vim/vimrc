@@ -25,6 +25,7 @@ set lazyredraw
 set tabstop=4
 set shiftwidth=4
 set autoindent
+set backspace=indent,eol,start
 
 " search behavior, ignore case when search all lowercase
 set ignorecase
