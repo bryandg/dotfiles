@@ -1,5 +1,5 @@
-all: vim terminal linux submodules
-.PHONY: all vim terminal linux submodules
+all: vim vim-key-bindings terminal cli-tools 
+.PHONY: all vim vim-key-bindings terminal cli-tools fzf submodules
 
 vim:
 	cd ..; ln -nsf dotfiles/vim .vim
@@ -21,7 +21,9 @@ terminal:
 		cat udacity-terminal-config/bash_profile >> ../.bash_profile; \
 	fi \
 
-cli-tools: submodules
+cli-tools: fzf
+
+fzf: submodules
 	which fzf && echo "fzf already installed" || ./cli-tools/fzf/install && echo "source ~/.fzf.bash" >> ~/.bash_profile
 
 submodules:
