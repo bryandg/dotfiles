@@ -4,6 +4,14 @@ all: vim terminal linux submodules
 vim:
 	cd ..; ln -nsf dotfiles/vim .vim
 
+vim-key-bindings:
+	if grep "set -o vi" ../.bashrc; \
+	then \
+		echo "vim keybindings already set"; \
+	else \
+		echo "set -o vi" >> ../.bashrc; \
+	fi \
+
 terminal:
 	cd ..; ln -nsf dotfiles/udacity-terminal-config .udacity-terminal-config;
 	if grep -Fq ".udacity-terminal-config" ../.bash_profile; \
