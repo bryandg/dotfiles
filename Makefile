@@ -13,8 +13,8 @@ terminal:
 		cat udacity-terminal-config/bash_profile >> ../.bash_profile; \
 	fi \
 
-linux: submodules
-	which fzf && echo "fzf already installed" || ./linux-cli/fzf/install && echo "source ~/.fzf.bash" >> ~/.bash_profile
-	
+cli-tools: submodules
+	which fzf && echo "fzf already installed" || ./cli-tools/fzf/install && echo "source ~/.fzf.bash" >> ~/.bash_profile
+
 submodules:
 	git submodule init && git submodule update

@@ -2,5 +2,5 @@
 	path = vim/pack/git-plugins/start/ale
 	url = https://github.com/dense-analysis/ale.git
 [submodule "linux-cli/fzf"]
-	path = linux-cli/fzf
+	path = cli-tools/fzf
 	url = https://github.com/junegunn/fzf.git
