@@ -28,6 +28,9 @@ set expandtab
 set autoindent
 set backspace=indent,eol,start
 
+" yank behavior
+:vmap y ygv<Esc> " keep cursor position after yank
+
 " search behavior, ignore case when search all lowercase
 set ignorecase
 set smartcase
