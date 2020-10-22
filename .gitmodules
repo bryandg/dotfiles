@@ -4,3 +4,9 @@
 [submodule "linux-cli/fzf"]
 	path = cli-tools/fzf
 	url = https://github.com/junegunn/fzf.git
+[submodule "vim/pack/tpope/start/fugitive"]
+	path = vim/pack/tpope/start/fugitive
+	url = https://tpope.io/vim/fugitive.git
+[submodule "vim/pack/dist/start/vim-airline"]
+	path = vim/pack/dist/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
