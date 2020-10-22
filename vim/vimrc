@@ -24,6 +24,7 @@ set lazyredraw
 " typing behavior
 set tabstop=4
 set shiftwidth=4
+set expandtab
 set autoindent
 set backspace=indent,eol,start
 
@@ -45,8 +46,8 @@ autocmd FileType python
 	\ setlocal fileformat=unix
 let g:ale_linters = {'python': ['flake8', 'mypy']}
 " FIXERS HAD TO GO AFTER LOADING ALE...
-" yaml
-autocmd FileType yaml setlocal expandtab
+" make
+autocmd FileType make setlocal noexpandtab
 
 " packages
 set rtp+=~/dotfiles/cli-tools/fzf
