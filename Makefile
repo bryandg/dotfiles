@@ -20,11 +20,11 @@ vim-key-bindings:
 
 terminal:
 	cd ..; ln -nsf dotfiles/udacity-terminal-config .udacity-terminal-config;
-	if grep -Fq "udacity-terminal-config" ../.bash_profile; \
+	if grep -Fq "udacity-terminal-config" ../.bashrc; \
 	then \
-		echo "bash_profile already references udacity-terminal-config"; \
+		echo "bashrc already references udacity-terminal-config"; \
 	else \
-		echo "source ~/dotfiles/udacity-terminal-config/bash_profile" >> ../.bash_profile; \
+		echo "source ~/dotfiles/udacity-terminal-config/bash_profile" >> ../.bashrc; \
 	fi \
 
 cli-tools: fzf
