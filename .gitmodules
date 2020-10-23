@@ -10,3 +10,9 @@
 [submodule "vim/pack/dist/start/vim-airline"]
 	path = vim/pack/dist/start/vim-airline
 	url = https://github.com/vim-airline/vim-airline
+[submodule "vim/pack/tpope/start/surround"]
+	path = vim/pack/tpope/start/surround
+	url = https://tpope.io/vim/surround.git
+[submodule "vim/pack/dist/start/YouCompleteMe"]
+	path = vim/pack/dist/start/YouCompleteMe
+	url = https://github.com/ycm-core/YouCompleteMe.git

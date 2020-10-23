@@ -4,6 +4,12 @@ all: vim vim-key-bindings terminal cli-tools
 vim:
 	cd ..; ln -nsf dotfiles/vim .vim
 
+vim-ycm: submodules
+	brew install cmake macvim python mono go nodejs
+	git submodule update --init --recursive	
+	python vim/pack/dist/start/YouCompleteMe/install.py # cannot be anaconda python!
+	echo "alias vim='mvim -v'" >> ../.bashrc
+
 vim-key-bindings:
 	if grep "set -o vi" ../.bashrc; \
 	then \
