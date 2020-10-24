@@ -32,5 +32,8 @@ cli-tools: fzf
 fzf: submodules
 	which fzf && echo "fzf already installed" || ./cli-tools/fzf/install && echo "source ~/.fzf.bash" >> ~/.bash_profile
 
+ctags:
+	which ctags && echo "ctags already installed" || brew install ctags
+
 submodules:
 	git submodule init && git submodule update
