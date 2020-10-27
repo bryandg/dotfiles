@@ -1,7 +1,7 @@
 all: vim vim-key-bindings terminal cli-tools fzf submodules
 .PHONY: all vim vim-key-bindings terminal cli-tools fzf submodules
 
-vim:
+vim: submodules
 	cd ..; ln -nsf dotfiles/vim .vim
 
 vim-ycm: submodules
