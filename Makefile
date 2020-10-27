@@ -1,4 +1,4 @@
-all: vim vim-key-bindings terminal cli-tools 
+all: vim vim-key-bindings terminal cli-tools fzf submodules
 .PHONY: all vim vim-key-bindings terminal cli-tools fzf submodules
 
 vim:
