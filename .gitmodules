@@ -16,3 +16,6 @@
 [submodule "vim/pack/dist/start/YouCompleteMe"]
 	path = vim/pack/dist/start/YouCompleteMe
 	url = https://github.com/ycm-core/YouCompleteMe.git
+[submodule "vim/pack/themes/opt/onedark.vim"]
+	path = vim/pack/themes/opt/onedark.vim
+	url = https://github.com/joshdick/onedark.vim.git
