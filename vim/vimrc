@@ -6,7 +6,6 @@ colorscheme onedark
 let g:airline_theme='onedark'
 " highlight commands must go after 'syntax on'
 highlight Visual cterm=reverse ctermbg=NONE
-highlight Pmenu ctermbg=gray guibg=gray
 set relativenumber
 set number
 set scrolloff=5
