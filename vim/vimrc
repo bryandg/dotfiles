@@ -26,6 +26,9 @@ nnoremap <space> za
 " should speed up macros and large pastes
 set lazyredraw
 
+" do not look for vim settings at the beginning and end of files
+set nomodeline
+
 " typing behavior
 set tabstop=4
 set shiftwidth=4
