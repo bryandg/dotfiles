@@ -1,6 +1,8 @@
 all: vim vim-key-bindings terminal cli-tools fzf submodules
 .PHONY: all vim vim-key-bindings terminal cli-tools fzf submodules
 
+SHELL := /bin/bash
+
 vim: submodules
 	if [[ -f ~/.vimrc ]]; \
 	then \
