@@ -4,6 +4,10 @@ let g:onedark_termcolors=256
 syntax on
 colorscheme onedark
 let g:airline_theme='onedark'
+" highlights columns for 80 and 120 character limits
+if exists('&colorcolumn')
+    set colorcolumn=80,120
+endif
 " highlight commands must go after 'syntax on'
 highlight Visual cterm=reverse ctermbg=NONE
 set relativenumber
