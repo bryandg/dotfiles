@@ -43,6 +43,8 @@ set ignorecase
 set smartcase
 "\s to search word under cursor
 :nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+" <leader>p to execute python code highlighted in visual mode
+xnoremap <leader>p :w !python<cr>
 
 " File type specific settings
 " python
