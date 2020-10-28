@@ -2,7 +2,20 @@ all: vim vim-key-bindings terminal cli-tools fzf submodules
 .PHONY: all vim vim-key-bindings terminal cli-tools fzf submodules
 
 vim: submodules
-	cd ..; ln -nsf dotfiles/vim .vim
+	if [[ -f ~/.vimrc ]]; \
+	then \
+		mv ~/.vimrc ~/.vimrc_backup && echo "moved existing .vimrc to .vimrc_backup"; \
+	else \
+		echo "no existing .vimrc"; \
+	fi; \
+	#
+	if [[ ! `readlink ~/.vim` = "dotfiles/vim" ]]; \
+	then \
+		mv ~/.vim ~/.vim_backup && echo "moved existing .vim directory to .vim_backup"; \
+		cd ..; ln -nsf dotfiles/vim .vim && echo "linked ~/.vim to dotfiles/vim"; \
+	else \
+		echo "~/.vim already linked to dotfiles/vim"; \
+	fi \
 
 vim-ycm: submodules
 	brew install cmake macvim python mono go nodejs
