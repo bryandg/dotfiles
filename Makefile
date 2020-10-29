@@ -55,3 +55,4 @@ submodules:
 
 flake8:
 	ln -nsf ~/dotfiles/config/flake8 ~/.config/flake8
+	python3 -m pip install flake8
