@@ -54,4 +54,5 @@ submodules:
 	git submodule init && git submodule update
 
 flake8:
+	python3 -m pip install flake8
 	cd ..; ln -nsf ~/dotfiles/config/flake8 .config/flake8
