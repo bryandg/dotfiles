@@ -21,7 +21,7 @@ vim: submodules
 
 vim-ycm: submodules
 	brew install cmake macvim python mono go nodejs
-	git submodule update --init --recursive	
+	git submodule update --init --recursive
 	python vim/pack/dist/start/YouCompleteMe/install.py # cannot be anaconda python!
 	echo "alias vim='mvim -v'" >> ~/.bashrc
 
@@ -56,3 +56,7 @@ submodules:
 flake8:
 	ln -nsf ~/dotfiles/config/flake8 ~/.config/flake8
 	python3 -m pip install flake8
+
+zsh:
+	ln -s ~/dotfiles/oh-my-zsh/themes/OneDark.zsh-theme ~/.oh-my-zsh/themes/OneDark.zsh-theme
+
