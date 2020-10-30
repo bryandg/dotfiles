@@ -22,3 +22,6 @@
 [submodule "vim/pack/plugins/start/vim-polyglot"]
 	path = vim/pack/plugins/start/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot
+[submodule "vim/pack/airblade/start/vim-gitgutter.git"]
+	path = vim/pack/airblade/start/vim-gitgutter.git
+	url = https://github.com/airblade/vim-gitgutter.git
