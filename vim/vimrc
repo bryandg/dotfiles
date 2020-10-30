@@ -82,3 +82,9 @@ let g:ale_fixers = {
 \	'python': ['black', 'isort']
 \}
 let g:ale_fix_on_save = 1
+
+" Run :DiffOrig to see a side by side comparison of unsaved changes
+if !exists(":DiffOrig")
+    command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
+          \ | wincmd p | diffthis
+    endif
