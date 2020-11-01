@@ -1,3 +1,5 @@
+" Set leader key to comma (,)
+let mapleader = ","
 " appearance
 packadd! onedark.vim
 let g:onedark_termcolors=256
