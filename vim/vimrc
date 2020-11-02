@@ -28,6 +28,9 @@ set foldmethod=indent
 set foldlevelstart=99 "no closed folds w/ each new buffer"
 nnoremap <space> za
 
+" Navigation
+nnoremap <leader>f :FZF<cr>
+
 " should speed up macros and large pastes
 set lazyredraw
 
