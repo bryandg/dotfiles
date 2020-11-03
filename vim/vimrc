@@ -23,6 +23,10 @@ let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 " working with multiple files
 set splitright
 set splitbelow
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 " code folding
 set foldmethod=indent
 set foldlevelstart=99 "no closed folds w/ each new buffer"
