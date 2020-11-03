@@ -1,5 +1,3 @@
-" Set leader key to comma (,)
-let mapleader = ","
 " appearance
 packadd! onedark.vim
 let g:onedark_termcolors=256
@@ -8,7 +6,7 @@ colorscheme onedark
 let g:airline_theme='onedark'
 " highlights columns for 80 and 120 character limits
 if exists('&colorcolumn')
-    set colorcolumn=80,120
+    set colorcolumn=88,120
 endif
 " highlight commands must go after 'syntax on'
 highlight Visual cterm=reverse ctermbg=NONE
@@ -32,8 +30,27 @@ set foldmethod=indent
 set foldlevelstart=99 "no closed folds w/ each new buffer"
 nnoremap <space> za
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Leader Mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Set leader key to comma (,)
+let mapleader = ","
 " Navigation
 nnoremap <leader>f :FZF<cr>
+" yank behavior
+vnoremap y ygv<Esc> " keep cursor position after yank
+"\s to search word under cursor
+nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
+" <leader>p to execute python code highlighted in visual mode
+xnoremap <leader>p :w !python<cr>
+" quick save
+nnoremap <leader>w :w<cr>
+" quick save and quit
+nnoremap <leader>x :x<cr>
+" quick explore
+nnoremap <leader>e :Ex<cr>
+" quick buffer switch
+nnoremap <leader><leader> <C-^>
 
 " should speed up macros and large pastes
 set lazyredraw
@@ -48,16 +65,9 @@ set expandtab
 set autoindent
 set backspace=indent,eol,start
 
-" yank behavior
-:vmap y ygv<Esc> " keep cursor position after yank
-
 " search behavior, ignore case when search all lowercase
 set ignorecase
 set smartcase
-"\s to search word under cursor
-:nnoremap <Leader>s :%s/\<<C-r><C-w>\>/
-" <leader>p to execute python code highlighted in visual mode
-xnoremap <leader>p :w !python<cr>
 
 " File type specific settings
 " python
