@@ -51,6 +51,8 @@ nnoremap <leader>x :x<cr>
 nnoremap <leader>e :Ex<cr>
 " quick buffer switch
 nnoremap <leader><leader> <C-^>
+" quick quit
+nnoremap <leader>q :q<cr>
 
 " should speed up macros and large pastes
 set lazyredraw
