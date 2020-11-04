@@ -58,5 +58,5 @@ flake8:
 	python3 -m pip install flake8
 
 zsh:
-	ln -s ~/dotfiles/oh-my-zsh/themes/OneDark.zsh-theme ~/.oh-my-zsh/themes/OneDark.zsh-theme
+	ln -s ~/dotfiles/oh-my-zsh/themes/keith12345.zsh-theme ~/.oh-my-zsh/themes/keith12345.zsh-theme
 
