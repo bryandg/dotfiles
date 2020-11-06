@@ -74,13 +74,13 @@ set smartcase
 " File type specific settings
 " python
 autocmd FileType python
-	\ setlocal tabstop=4 |
-	\ setlocal softtabstop=4 |
-	\ setlocal shiftwidth=4 |
-	\ setlocal textwidth=79 |
-	\ setlocal expandtab |
-	\ setlocal autoindent |
-	\ setlocal fileformat=unix
+    \ setlocal tabstop=4 |
+    \ setlocal softtabstop=4 |
+    \ setlocal shiftwidth=4 |
+    \ setlocal textwidth=79 |
+    \ setlocal expandtab |
+    \ setlocal autoindent |
+    \ setlocal fileformat=unix
 let g:ale_linters = {'python': ['flake8', 'mypy']}
 " FIXERS HAD TO GO AFTER LOADING ALE...
 " make
@@ -99,8 +99,8 @@ silent! helptags ALL
 
 " python
 let g:ale_fixers = {
-\	'*': ['remove_trailing_lines', 'trim_whitespace'],
-\	'python': ['black', 'isort', 'remove_trailing_lines', 'trim_whitespace'],
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['black', 'isort', 'remove_trailing_lines', 'trim_whitespace'],
 \   'markdown': []
 \}
 let g:ale_fix_on_save = 1
