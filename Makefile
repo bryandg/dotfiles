@@ -57,6 +57,13 @@ flake8:
 	ln -nsf ~/dotfiles/config/flake8 ~/.config/flake8
 	python3 -m pip install flake8
 
+tilix:
+	@ln -nsf ~/dotfiles/config/tilix/schemes/OneDark.json ~/.config/tilix/schemes/OneDark.json
+	@printf "To enable the OneDark tilix theme: \n
+	Open up tilix preferences (you can use the command tilix --preferences), \n \
+	go to select your profile from the Profiles section, select the color tab, \n \
+	and select the OneDark color scheme to enable\n"\
+
 zsh:
-	ln -s ~/dotfiles/oh-my-zsh/themes/OneDark.zsh-theme ~/.oh-my-zsh/themes/OneDark.zsh-theme
+	@ln -s ~/dotfiles/oh-my-zsh/themes/keith12345.zsh-theme ~/.oh-my-zsh/themes/keith12345.zsh-theme
 
