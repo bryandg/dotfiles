@@ -42,6 +42,13 @@ terminal:
 		echo "source ~/dotfiles/udacity-terminal-config/bash_profile" >> ~/.bashrc; \
 	fi \
 
+fish:
+	brew install fish
+	echo "`which fish`" >> /etc/shells
+
+oh-my-fish:
+	curl -L https://get.oh-my.fish | fish
+
 cli-tools: fzf
 
 fzf: submodules
