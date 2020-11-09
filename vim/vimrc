@@ -53,6 +53,13 @@ nnoremap <leader>e :Ex<cr>
 nnoremap <leader><leader> <C-^>
 " quick quit
 nnoremap <leader>q :q<cr>
+" Fat finger escape
+inoremap <F4> <Esc>
+inoremap <F5> <Esc>
+inoremap <F6> <Esc>
+inoremap <F7> <Esc>
+inoremap <F8> <Esc>
+inoremap <F9> <Esc>
 
 " should speed up macros and large pastes
 set lazyredraw
