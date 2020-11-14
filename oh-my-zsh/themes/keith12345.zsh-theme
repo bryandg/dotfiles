@@ -19,7 +19,7 @@ ZSH_THEME_GIT_PROMPT_DIRTY=""
 NEWLINE=$'\n'
 
 # Main prompt
-PROMPT='%{$fg_no_bold[blue]%}%n%{$fg_no_bold[magenta]%}•%{$fg_no_bold[green]%}%3~%{$fg_no_bold[cyan]%}($(git_prompt_info)$(git_prompt_status)%{$fg_no_bold[cyan]%})%{$fg_no_bold[magenta]%}${NEWLINE} » '
+PROMPT='%{$fg_no_bold[blue]%}%n%{$fg_no_bold[magenta]%}•%{$fg_no_bold[green]%}%3~%{$fg_no_bold[cyan]%}($(git_prompt_info)$(git_prompt_status)%{$fg_no_bold[cyan]%})%{$fg_no_bold[magenta]%}${NEWLINE} » %{$reset_color%}'
 
 # Right prompt (shows time)
 RPROMPT='%{$fg_no_bold[cyan]%}[%*]'
