@@ -28,3 +28,6 @@
 [submodule "vim/pack/jianmiao/start/auto-pairs"]
 	path = vim/pack/jianmiao/start/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule "vim/pack/preservim/start/nerdcommenter.git"]
+	path = vim/pack/preservim/start/nerdcommenter.git
+	url = https://github.com/preservim/nerdcommenter.git
