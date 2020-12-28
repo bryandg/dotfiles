@@ -14,6 +14,16 @@ set relativenumber
 set number
 set scrolloff=5
 set incsearch
+" vim-rainbow
+let g:rainbow_active = 1
+let g:rainbow_load_separately = [
+    \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+    \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
+    \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+    \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
+    \ ]
+let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
+let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 " change cursor shape based on mode
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
@@ -101,12 +111,15 @@ set ignorecase
 set smartcase
 
 " File type specific settings
+" markdown
+autocmd FileType markdown
+    \ setlocal textwidth=120 |
 " python
 autocmd FileType python
     \ setlocal tabstop=4 |
     \ setlocal softtabstop=4 |
     \ setlocal shiftwidth=4 |
-    \ setlocal textwidth=79 |
+    \ setlocal textwidth=120 |
     \ setlocal expandtab |
     \ setlocal autoindent |
     \ setlocal fileformat=unix
