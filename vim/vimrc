@@ -110,3 +110,7 @@ if !exists(":DiffOrig")
     command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
           \ | wincmd p | diffthis
     endif
+
+" Abbreviations
+autocmd FileType cpp
+    \ iabbrev sout std::cout << << std::endl;<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
