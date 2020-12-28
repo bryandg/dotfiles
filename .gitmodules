@@ -25,9 +25,12 @@
 [submodule "vim/pack/airblade/start/vim-gitgutter.git"]
 	path = vim/pack/airblade/start/vim-gitgutter.git
 	url = https://github.com/airblade/vim-gitgutter.git
-[submodule "vim/pack/jianmiao/start/auto-pairs"]
-	path = vim/pack/jianmiao/start/auto-pairs
-	url = https://github.com/jiangmiao/auto-pairs.git
 [submodule "vim/pack/preservim/start/nerdcommenter.git"]
 	path = vim/pack/preservim/start/nerdcommenter.git
 	url = https://github.com/preservim/nerdcommenter.git
+[submodule "vim/pack/keith12345/start/vim-uppercase-sql.git"]
+	path = vim/pack/keith12345/start/vim-uppercase-sql.git
+	url = https://github.com/keith12345/vim-uppercase-sql.git
+[submodule "vim/pack/ludovicchabant/start/vim-gutentags.git"]
+	path = vim/pack/ludovicchabant/start/vim-gutentags.git
+	url = https://github.com/ludovicchabant/vim-gutentags.git
