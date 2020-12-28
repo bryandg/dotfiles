@@ -39,6 +39,13 @@ nnoremap <C-H> <C-W><C-H>
 set foldmethod=indent
 set foldlevelstart=99 "no closed folds w/ each new buffer"
 nnoremap <space> za
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" netrw
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" remove header
+let g:netrw_banner = 0
+" set netrw size to 1/3 of current pane
+let g:netrw_winsize = 33
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Leader Mappings
