@@ -67,3 +67,8 @@ tilix:
 zsh:
 	@ln -s ~/dotfiles/oh-my-zsh/themes/keith12345.zsh-theme ~/.oh-my-zsh/themes/keith12345.zsh-theme
 
+git-dir:
+	@git config --global core.excludesfile ~/.gitignore
+	@printf "Told git to use a global .gitignore\n"
+	@ln -nsf ~/dotfiles/git/gitignore ~/.gitignore
+	@printf "Linked dotfiles/git/gitignore to ~/.gitignore\n"
