@@ -28,3 +28,6 @@
 [submodule "vim/pack/jianmiao/start/auto-pairs"]
 	path = vim/pack/jianmiao/start/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs.git
+[submodule "vim/pack/ludovicchabant/start/vim-gutentags.git"]
+	path = vim/pack/ludovicchabant/start/vim-gutentags.git
+	url = https://github.com/ludovicchabant/vim-gutentags.git
