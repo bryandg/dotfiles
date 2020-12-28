@@ -89,12 +89,15 @@ set ignorecase
 set smartcase
 
 " File type specific settings
+" markdown
+autocmd FileType markdown
+    \ setlocal textwidth=120 |
 " python
 autocmd FileType python
     \ setlocal tabstop=4 |
     \ setlocal softtabstop=4 |
     \ setlocal shiftwidth=4 |
-    \ setlocal textwidth=79 |
+    \ setlocal textwidth=120 |
     \ setlocal expandtab |
     \ setlocal autoindent |
     \ setlocal fileformat=unix
