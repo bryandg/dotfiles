@@ -25,6 +25,9 @@
 [submodule "vim/pack/airblade/start/vim-gitgutter.git"]
 	path = vim/pack/airblade/start/vim-gitgutter.git
 	url = https://github.com/airblade/vim-gitgutter.git
+[submodule "vim/pack/vim-rainbow/start/vim-rainbow.git"]
+	path = vim/pack/vim-rainbow/start/vim-rainbow.git
+	url = https://github.com/frazrepo/vim-rainbow.git
 [submodule "vim/pack/keith12345/start/vim-uppercase-sql.git"]
 	path = vim/pack/keith12345/start/vim-uppercase-sql.git
 	url = https://github.com/keith12345/vim-uppercase-sql.git
