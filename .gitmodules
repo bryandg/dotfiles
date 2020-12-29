@@ -28,9 +28,6 @@
 [submodule "vim/pack/preservim/start/nerdcommenter.git"]
 	path = vim/pack/preservim/start/nerdcommenter.git
 	url = https://github.com/preservim/nerdcommenter.git
-[submodule "vim/pack/vim-rainbow/start/vim-rainbow.git"]
-	path = vim/pack/vim-rainbow/start/vim-rainbow.git
-	url = https://github.com/frazrepo/vim-rainbow.git
 [submodule "vim/pack/keith12345/start/vim-uppercase-sql.git"]
 	path = vim/pack/keith12345/start/vim-uppercase-sql.git
 	url = https://github.com/keith12345/vim-uppercase-sql.git
