@@ -133,4 +133,9 @@ if !exists(":DiffOrig")
 
 " Abbreviations
 autocmd FileType cpp
-    \ iabbrev sout std::cout << << std::endl;<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>
+    \ iabbrev sout std::cout << << std::endl;<Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left><Left>|
+    \ iabbrev sin std::cin >>;<Left>|
+    \ iabbrev #i #include |
+autocmd FileType python
+    \ iabbrev importnp import numpy as np|
+    \ iabbrev importpd import pandas as pd|
