@@ -14,6 +14,13 @@ set relativenumber
 set number
 set scrolloff=5
 set incsearch
+" rainbow
+let g:rainbow_active = 1
+let g:rainbow_conf = {
+    \ 'operators': '',
+    \ 'ctermfgs':
+        \ ['gray', 'white', 'darkgray', 'lightgray', 'black']
+\ }
 " change cursor shape based on mode
 let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 let &t_SR = "\<Esc>]50;CursorShape=2\x7"
