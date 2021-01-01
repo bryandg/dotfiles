@@ -3,21 +3,13 @@ all: vim vim-key-bindings terminal cli-tools fzf submodules
 
 SHELL := /bin/bash
 
-vim: submodules
-	if [[ -f ~/.vimrc ]]; \
-	then \
-		mv ~/.vimrc ~/.vimrc_backup && echo "moved existing ~/.vimrc to ~/.vimrc_backup"; \
-	else \
-		echo "no existing ~/.vimrc"; \
-	fi; \
-	#
-	if [[ ! `readlink ~/.vim` = ~/dotfiles/vim ]]; \
-	then \
-		mv ~/.vim ~/.vim_backup && echo "moved existing ~/.vim directory to ~/.vim_backup"; \
-		ln -nsf ~/dotfiles/vim ~/.vim && echo "linked ~/.vim to ~/dotfiles/vim"; \
-	else \
-		echo "~/.vim already linked to ~/dotfiles/vim"; \
-	fi \
+vim: submodules vim-dir
+
+vim-dir:
+	@bash utils link 'vim' '.vim'
+
+clean-vim-dir:
+	@bash utils unlink '.vim'
 
 vim-ycm: submodules
 	brew install cmake macvim python mono go nodejs
@@ -68,7 +60,8 @@ zsh:
 	@ln -s ~/dotfiles/oh-my-zsh/themes/keith12345.zsh-theme ~/.oh-my-zsh/themes/keith12345.zsh-theme
 
 git-dir:
-	@git config --global core.excludesfile ~/.gitignore
-	@printf "Told git to use a global .gitignore\n"
-	@ln -nsf ~/dotfiles/git/gitignore ~/.gitignore
-	@printf "Linked dotfiles/git/gitignore to ~/.gitignore\n"
+	@bash utils check_for_global_gitignore
+	@bash utils link 'git/gitignore' '.gitignore'
+
+clean-git-dir:
+	@bash utils unlink '.gitignore'
