@@ -45,9 +45,16 @@ ctags:
 submodules:
 	git submodule init && git submodule update
 
-flake8:
-	ln -nsf ~/dotfiles/config/flake8 ~/.config/flake8
-	python3 -m pip install flake8
+pip-setup:
+	@bash utils install_pip
+
+flake8: pip-setup
+	@bash utils link 'config/flake8' '.config/flake8'
+	@bash utils pip_install_python_package flake8
+
+clean-flake8:
+	@bash utils unlink '.config/flake8'
+	@bash utils pip_uninstall_python_package flake8
 
 tilix:
 	@ln -nsf ~/dotfiles/config/tilix/schemes/OneDark.json ~/.config/tilix/schemes/OneDark.json
@@ -56,12 +63,14 @@ tilix:
 	go to select your profile from the Profiles section, select the color tab, \n \
 	and select the OneDark color scheme to enable\n"\
 
-zsh:
+zsh: zsh-theme
+
+zsh-theme:
 	@ln -s ~/dotfiles/oh-my-zsh/themes/keith12345.zsh-theme ~/.oh-my-zsh/themes/keith12345.zsh-theme
 
-git-dir:
+gitignore:
 	@bash utils check_for_global_gitignore
 	@bash utils link 'git/gitignore' '.gitignore'
 
-clean-git-dir:
+clean-gitignore:
 	@bash utils unlink '.gitignore'

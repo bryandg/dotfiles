@@ -8,6 +8,30 @@ function check_for_global_gitignore {
     fi
 }
 
+function get_device_info {
+    DEVICE_INFO=`uname -a`
+}
+
+function pip_install_python_package {
+    if [[ `pip show $1` == "WARNING: Package(s) not found: $1" ]];
+    then
+        echo "Installing $1"
+        python3 -m pip install $1
+    else
+        echo "$1 already install"
+    fi
+}
+
+function pip_uninstall_python_package {
+    if [[ `pip show $1` == "WARNING: Package(s) not found: $1" ]];
+    then
+        echo "No $1 to uninstall"
+    else
+        python3 pip uninstall $1
+        echo "Uninstalling $1"
+    fi
+}
+
 function create_symlink {
     # $1 - dotiles content
     # $2 - local content
@@ -64,6 +88,25 @@ function unlink {
         fi
     else
         echo "~/${1} already clean"
+    fi
+}
+
+function install_pip {
+    if ! [[ `pip --version` == *"python3"* ]];
+    then
+        sudo apt update
+        sudo apt install python3-pip
+        case "$DEVICE_INFO" in
+            Linux*)
+                sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
+                ;;
+            Darwin*)
+                port select --set pip pip3
+                ;;
+            *)
+                echo "os not recognized"
+                ;;
+        esac
     fi
 }
 
