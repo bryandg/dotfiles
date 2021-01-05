@@ -14,6 +14,9 @@ set relativenumber
 set number
 set scrolloff=5
 set incsearch
+" vim-matchup
+let g:matchup_matchparen_deferred = 1
+let g:matchup_matchparen_hi_surround_always = 1
 " vim-rainbow
 let g:rainbow_active = 1
 let g:rainbow_load_separately = [
