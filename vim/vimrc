@@ -8,6 +8,8 @@ let g:airline_theme='onedark'
 if exists('&colorcolumn')
     set colorcolumn=88,120
 endif
+" highlight cursor line
+set cursorline
 " highlight commands must go after 'syntax on'
 highlight Visual cterm=reverse ctermbg=NONE
 set relativenumber
