@@ -37,3 +37,6 @@
 [submodule "vim/pack/luochen1990/start/rainbow.git"]
 	path = vim/pack/luochen1990/start/rainbow.git
 	url = https://github.com/luochen1990/rainbow.git
+[submodule "vim/pack/andymass/start/vim-matchup.git"]
+	path = vim/pack/andymass/start/vim-matchup.git
+	url = https://github.com/andymass/vim-matchup.git
