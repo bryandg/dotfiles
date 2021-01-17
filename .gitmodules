@@ -37,3 +37,6 @@
 [submodule "vim/pack/ludovicchabant/start/vim-gutentags.git"]
 	path = vim/pack/ludovicchabant/start/vim-gutentags.git
 	url = https://github.com/ludovicchabant/vim-gutentags.git
+[submodule "vim/pack/puremorning/start/vimspector.git"]
+	path = vim/pack/puremorning/start/vimspector.git
+	url = https://github.com/puremourning/vimspector.git

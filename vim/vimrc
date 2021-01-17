@@ -99,6 +99,10 @@ set lazyredraw
 " do not look for vim settings at the beginning and end of files
 set nomodeline
 
+" vimpspector
+let g:vimspector_install_gadgets = [ 'debugpy', 'vscode-cpptools']
+let g:vimspector_enable_mappings = 'HUMAN'
+
 " typing behavior
 set tabstop=4
 set shiftwidth=4
