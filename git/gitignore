@@ -9,6 +9,7 @@
 *.o
 *.so
 *.py[c|o]
+*.factorypath
 
 # Packages #
 ############
@@ -45,6 +46,7 @@ tags
 tags/*
 TAGS
 .netrwhist
+tags.*
 
 # Editor files #
 ###############
