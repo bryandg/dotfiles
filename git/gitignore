@@ -10,6 +10,7 @@
 *.so
 *.py[c|o]
 *.factorypath
+*.bin
 
 # Packages #
 ############
@@ -67,3 +68,7 @@ tags.*
 # git #
 #######
 .orig
+
+# web apps #
+############
+*.state
