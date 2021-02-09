@@ -34,12 +34,15 @@
 [submodule "vim/pack/ludovicchabant/start/vim-gutentags.git"]
 	path = vim/pack/ludovicchabant/start/vim-gutentags.git
 	url = https://github.com/ludovicchabant/vim-gutentags.git
-[submodule "vim/pack/luochen1990/start/rainbow.git"]
-	path = vim/pack/luochen1990/start/rainbow.git
-	url = https://github.com/luochen1990/rainbow.git
-[submodule "vim/pack/andymass/start/vim-matchup.git"]
-	path = vim/pack/andymass/start/vim-matchup.git
-	url = https://github.com/andymass/vim-matchup.git
 [submodule "vim/pack/puremorning/start/vimspector.git"]
 	path = vim/pack/puremorning/start/vimspector.git
 	url = https://github.com/puremourning/vimspector.git
+[submodule "vim/pack/andymass/start/vim-matchup.git"]
+	path = vim/pack/andymass/start/vim-matchup.git
+	url = https://github.com/andymass/vim-matchup.git
+[submodule "vim/pack/luochen1990/start/rainbow.git"]
+	path = vim/pack/luochen1990/start/rainbow.git
+	url = https://github.com/luochen1990/rainbow.git
+[submodule "vim/pack/kkoomen/start/vim-doge.git"]
+	path = vim/pack/kkoomen/start/vim-doge.git
+	url = https://github.com/kkoomen/vim-doge.git
