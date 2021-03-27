@@ -49,8 +49,9 @@ set foldmethod=indent
 set foldlevelstart=99 "no closed folds w/ each new buffer"
 nnoremap <space> za
 " vim-doge docstring generation
-let g:doge_enable_mappings
-let g:doge_mapping
+"let g:doge_doc_standard_python = 'numpy'
+"let g:doge_enable_mappings
+"let g:doge_mapping
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "commenting and options
