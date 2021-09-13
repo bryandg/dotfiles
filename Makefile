@@ -72,3 +72,7 @@ git-dir:
 	@printf "Told git to use a global .gitignore\n"
 	@ln -nsf ~/dotfiles/git/gitignore ~/.gitignore
 	@printf "Linked dotfiles/git/gitignore to ~/.gitignore\n"
+
+rm-problem-submodules:
+	rm -rf vim/pack/dist/start/YouCompleteMe
+	rm -rf vim/pack/ludovicchabant
