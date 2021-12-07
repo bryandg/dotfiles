@@ -71,3 +71,11 @@ tags.*
 # web apps #
 ############
 *.state
+
+# ML #
+######
+models/
+
+# Misc #
+########
+rcz
