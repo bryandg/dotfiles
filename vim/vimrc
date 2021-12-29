@@ -43,10 +43,16 @@ let &t_EI = "\<Esc>[0 q"
 " working with multiple files
 set splitright
 set splitbelow
+" switch tabs
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+"
+nnoremap <C-Up> :exe "res +3"<CR>
+nnoremap <C-Down> :exe "res -3"<CR>
+nnoremap <C-Right> :exe "vertical resize +3"<CR>
+nnoremap <C-Left> :exe "vertical resize -3"<CR>
 " code folding
 set foldmethod=indent
 set foldlevelstart=99 "no closed folds w/ each new buffer"
