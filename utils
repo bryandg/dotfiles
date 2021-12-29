@@ -58,7 +58,7 @@ function link {
             echo "Dotfiles ${2} already symlinked";
         else
             echo "Replacing Existing symlinked ${2} with bryandg ${2}";
-            create_symlink
+            create_symlink $1 $2
         fi
     else
         move_original_content $2
