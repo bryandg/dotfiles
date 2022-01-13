@@ -79,3 +79,8 @@ models/
 # Misc #
 ########
 rcz
+
+datascience/data_qa/img/
+datascience/data_qa/reports/
+datascience/data_qa/templates/
+datascience/data_qa/templates/
