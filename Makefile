@@ -3,21 +3,13 @@ all: vim vim-key-bindings terminal cli-tools fzf submodules
 
 SHELL := /bin/bash
 
-vim: submodules
-	if [[ -f ~/.vimrc ]]; \
-	then \
-		mv ~/.vimrc ~/.vimrc_backup && echo "moved existing ~/.vimrc to ~/.vimrc_backup"; \
-	else \
-		echo "no existing ~/.vimrc"; \
-	fi; \
-	#
-	if [[ ! `readlink ~/.vim` = ~/dotfiles/vim ]]; \
-	then \
-		mv ~/.vim ~/.vim_backup && echo "moved existing ~/.vim directory to ~/.vim_backup"; \
-		ln -nsf ~/dotfiles/vim ~/.vim && echo "linked ~/.vim to ~/dotfiles/vim"; \
-	else \
-		echo "~/.vim already linked to ~/dotfiles/vim"; \
-	fi \
+vim: submodules vim-dir
+
+vim-dir:
+	@bash utils link 'vim' '.vim'
+
+clean-vim-dir:
+	@bash utils unlink '.vim'
 
 vim-ycm: submodules
 	brew install cmake macvim python mono go nodejs
@@ -53,9 +45,16 @@ ctags:
 submodules:
 	git submodule init && git submodule update
 
-flake8:
-	ln -nsf ~/dotfiles/config/flake8 ~/.config/flake8
-	python3 -m pip install flake8
+pip-setup:
+	@bash utils install_pip
+
+flake8: pip-setup
+	@bash utils link 'config/flake8' '.config/flake8'
+	@bash utils pip_install_python_package flake8
+
+clean-flake8:
+	@bash utils unlink '.config/flake8'
+	@bash utils pip_uninstall_python_package flake8
 
 tilix:
 	@ln -nsf ~/dotfiles/config/tilix/schemes/OneDark.json ~/.config/tilix/schemes/OneDark.json
@@ -64,11 +63,14 @@ tilix:
 	go to select your profile from the Profiles section, select the color tab, \n \
 	and select the OneDark color scheme to enable\n"\
 
-zsh:
+zsh: zsh-theme
+
+zsh-theme:
 	@ln -s ~/dotfiles/oh-my-zsh/themes/keith12345.zsh-theme ~/.oh-my-zsh/themes/keith12345.zsh-theme
 
-git-dir:
-	@git config --global core.excludesfile ~/.gitignore
-	@printf "Told git to use a global .gitignore\n"
-	@ln -nsf ~/dotfiles/git/gitignore ~/.gitignore
-	@printf "Linked dotfiles/git/gitignore to ~/.gitignore\n"
+gitignore:
+	@bash utils check_for_global_gitignore
+	@bash utils link 'git/gitignore' '.gitignore'
+
+clean-gitignore:
+	@bash utils unlink '.gitignore'

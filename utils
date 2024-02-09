@@ -1,0 +1,119 @@
+#!/usr/bin/env bash
+
+function check_for_global_gitignore {
+    if ! [[ `git config --global core.excludesfile` == *".gitignore" ]];
+    then
+        git config --global core.excludesfile ~/.gitignore
+        echo "Told git to use a .gitignore as global excludesfile"
+    fi
+}
+
+function get_device_info {
+    DEVICE_INFO=`uname -a`
+}
+
+function pip_install_python_package {
+    if [[ `pip show $1` == "WARNING: Package(s) not found: $1" ]];
+    then
+        echo "Installing $1"
+        python3 -m pip install $1
+    else
+        echo "$1 already install"
+    fi
+}
+
+function pip_uninstall_python_package {
+    if [[ `pip show $1` == "WARNING: Package(s) not found: $1" ]];
+    then
+        echo "No $1 to uninstall"
+    else
+        python3 pip uninstall $1
+        echo "Uninstalling $1"
+    fi
+}
+
+function create_symlink {
+    # $1 - dotiles content
+    # $2 - local content
+    ln -nsf ~/dotfiles/${1} ~/${2}
+    echo "Linked dotfiles/${1} to ~/${2}"
+}
+
+function move_original_content {
+    # $1 - local content
+    if [[ -f ~/${1} ]] || [[ -d ~/${1} ]];
+    then
+        echo "Moving old ${1} to ~/${1}_old";
+        mv ~/${1} ~/${1}_old;
+    fi
+}
+
+function link {
+    # $1 - dotiles content
+    # $2 - local content
+    if [[ -L ~/${2} ]];
+    then
+        if [[ `stat ~/${2} | head -n 1` == *"/dotfiles/${1}"* ]];
+        then
+            echo "Dotfiles ${2} already symlinked";
+        else
+            echo "Replacing Existing symlinked ${2} with bryandg ${2}";
+            create_symlink $1 $2
+        fi
+    else
+        move_original_content $2
+        create_symlink $1 $2
+    fi
+}
+
+function unlink {
+    # $1 - local content
+    if [[ -f ~/${1}_old ]]
+    then
+        echo "Restoring original ~/${1} file"
+        mv ~/${1}_old ~/${1};
+    elif [[ -d ~/${1}_old ]];
+    then
+        echo "Restoring original ~/${1} dir"
+        rm -r ~/${1}
+        mv ~/${1}_old ~/${1};
+    elif [[ -L ~/${1} ]];
+    then
+        echo "No original to restore, removing symlink";
+        if [[ -f ~/${1} ]];
+        then
+            rm ~/${1};
+        else
+            rm -r ~/${1};
+        fi
+    else
+        echo "~/${1} already clean"
+    fi
+}
+
+function install_pip {
+    if ! [[ `pip --version` == *"python3"* ]];
+    then
+        sudo apt update
+        sudo apt install python3-pip
+        case "$DEVICE_INFO" in
+            Linux*)
+                sudo update-alternatives --install /usr/bin/pip pip /usr/bin/pip3 1
+                ;;
+            Darwin*)
+                port select --set pip pip3
+                ;;
+            *)
+                echo "os not recognized"
+                ;;
+        esac
+    fi
+}
+
+function call_function {
+    # $1 - function name
+    # $2... - parameters
+    $1 $2 $3 $4
+}
+
+call_function $1 $2 $3 $4
