@@ -42,7 +42,7 @@ terminal:
 		echo "source ~/dotfiles/udacity-terminal-config/bash_profile" >> ~/.bashrc; \
 	fi \
 
-cli-tools: fzf
+cli-tools: fzf zsh-autosuggestions
 
 fzf: submodules
 	which fzf && echo "fzf already installed" || ./cli-tools/fzf/install && echo "source ~/.fzf.bash" >> ~/.bash_profile
@@ -52,6 +52,10 @@ ctags:
 
 submodules:
 	git submodule init && git submodule update
+
+zsh-autosuggestions:
+	echo "Installing zsh-autosuggestions... Don't forget to update your plugins!"
+	git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 
 flake8:
 	ln -nsf ~/dotfiles/config/flake8 ~/.config/flake8
